@@ -216,6 +216,19 @@
         <img src="images/image3.JPG" alt="Cloud Forest 3">
         <img src="images/image4.jpg" alt="Cloud Forest 4">
     </div>
+    <style>
+        @keyframes slide {
+            0%   { transform: translateX(0); }
+            25%  { transform: translateX(-100%); }
+            50%  { transform: translateX(-200%); }
+            75%  { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        .hero .slider {
+            animation: slide 30s infinite; /* Slowed down from 15s to 30s */
+        }
+    </style>
     <div class="hero-content">
         <h2>Matarredonda: A High-Altitude Adventure</h2>
         <p class="tagline">Lose yourself in the clouds of Bogotá...</p>
