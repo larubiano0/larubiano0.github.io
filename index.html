@@ -15,6 +15,23 @@
       gtag('config', 'AW-11497899191');
     </script>
 
+    <!-- Event snippet for Contact conversion page -->
+    <!-- In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11497899191/zsYGCIrM4_cZELeJ0Ooq',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -204,7 +221,7 @@
         <p class="tagline">Lose yourself in the clouds of Bogotá...</p>
         <p class="benefits">Private Hikes | Stunning Views | Seamless Travel</p>
         <p style="font-style: italic;">(Private transport, bilingual guides, and medical insurance included)</p>
-        <a class="btn" href="https://wa.me/573144501701?text=Hello%20there!%20I%27m%20interested%20in%20booking%20a%20tour.">Book Your Tour Now</a>
+        <a class="btn" href="#" onclick="return gtag_report_conversion('https://wa.me/573144501701?text=Hello%20there!%20I%27m%20interested%20in%20booking%20a%20tour.');">Book Your Tour Now</a>
     </div>
 </div>
 
